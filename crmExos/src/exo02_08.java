@@ -12,9 +12,9 @@ public class exo02_08 {
         System.out.print("Veuillez saisir le nombre de voix du 4e candidat : ");
         int fourth = scan.nextInt();
         int sum = first + second + third + fourth;
-        if (first > sum / 2.0)
+        if (first > sum / 2)
             System.out.println("Le 1er candidat est élu au premier tour");
-        else if (first <= sum / 8.0)
+        else if (first <= sum / 8 || second > sum / 2 || third > sum / 2 || fourth > sum / 2)
             System.out.println("Le 1er candidat est battu");
         else if (first > second && first > third && first > fourth)
             System.out.println("Le 1er candidat est en ballottage favorable");
