@@ -12,7 +12,7 @@ public class exo02_09 {
         System.out.print("Depuis combien d'année le conducteur est il assuré ? ");
         int years = scan.nextInt();
         int insurance = 3;
-        String color[] = {"refusée.", "rouge.", "orange.", "vert.", "bleu."};
+        String color[] = { "refusée.", "rouge.", "orange.", "vert.", "bleu." };
         if (age < 25)
             insurance -= 1;
         if (permit < 2)
@@ -21,8 +21,10 @@ public class exo02_09 {
             insurance -= 1;
             accident--;
         }
-        if (insurance > 0 && years >=5)
+        if (insurance > 0 && years >= 5)
             insurance++;
+        if (insurance < 0)
+            insurance = 0;
         if (insurance > 0)
             System.out.println("La demande d'assurance est acceptée et le tarif est " + color[insurance]);
         else
