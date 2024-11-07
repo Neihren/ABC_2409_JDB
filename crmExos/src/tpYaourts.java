@@ -1,10 +1,10 @@
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import org.json.simple.JSONObject;
 
 public class tpYaourts {
     public static void main(String[] args) {
+
         String[] json = { "blue",
                 "green",
                 "red",
