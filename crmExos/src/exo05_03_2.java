@@ -26,13 +26,13 @@ public class exo05_03_2 {
             System.out.print("Saisir une valeur maximum : ");
             userInput = scan.nextLine();
             max = decimalFormat.parse(userInput).floatValue();
-            if (unit.equals("C")) {
+            if (unit.equalsIgnoreCase("C")) {
                 System.out.print(min + "°C vaut " + (float) Math.round(((min * (9f / 5f)) + 32f) * 100f) / 100f + "°F et ");
                 System.out.println(max + "°C vaut " + (float) Math.round(((max * (9f / 5f)) + 32f) * 100f) / 100f + "°F");
             } 
             else {
-                System.out.print(min + "°C vaut " + (float) Math.round(((min - 32f) * (5f / 9f)) * 100f) / 100f + "°F et ");
-                System.out.println(max + "°C vaut " + (float) Math.round(((max - 32f) * (5f / 9f)) * 100f) / 100f + "°F");
+                System.out.print(min + "°F vaut " + (float) Math.round(((min - 32f) * (5f / 9f)) * 100f) / 100f + "°C et ");
+                System.out.println(max + "°F vaut " + (float) Math.round(((max - 32f) * (5f / 9f)) * 100f) / 100f + "°C");
             }
         }
         scan.close();
