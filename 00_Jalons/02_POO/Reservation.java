@@ -63,7 +63,7 @@ public class Reservation {
             }
             if (this.prixFinale <= vol.getTarif() - 600) {
                 this.prixFinale = this.prixFinale - 600;
-                return this.prixFinale - 600;
+                return this.prixFinale;
             } else {
                 return this.prixFinale;
             }
