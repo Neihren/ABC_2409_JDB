@@ -1,5 +1,5 @@
 
-public class Main {
+public class BouteilleMain {
     public static void main(String[] args) throws Exception {
         
         // Instanciation de l'objet b0 de la classe Bouteille par constructeur par défaut
@@ -10,7 +10,9 @@ public class Main {
         Bouteille b2 = (Bouteille) b1.clone();
         
         // Affichage des etats de l'objet b1 avec la méthode toString()
+        System.out.println(b0.toString());
         System.out.println(b1.toString());
+        System.out.println(b2.toString());
         display.bottle(b1.getContenuEnPourcentage(), b1.getEstOuvert());
         
         // Fermeture de l'objet b1 avec la méthode fermer()

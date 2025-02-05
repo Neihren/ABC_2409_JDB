@@ -1,5 +1,3 @@
-import java.util.List;
-import java.io.Console;
 
 public class Account {
     private String name;

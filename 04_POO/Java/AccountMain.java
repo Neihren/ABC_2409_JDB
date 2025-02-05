@@ -25,6 +25,6 @@ public class AccountMain {
                 System.out.println("Entrée incorrecte");
             }
         } while (!answer.equalsIgnoreCase("q"));
-
+        sc.close();
     }
 }

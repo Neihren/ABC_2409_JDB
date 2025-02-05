@@ -2,6 +2,7 @@
 // "implements Cloneable" permet de clonage des objets
 public class Bouteille implements Cloneable {
 
+    
     // Attributs
     private boolean estOuvert;
     private float contenanceEnML;
