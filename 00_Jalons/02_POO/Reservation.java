@@ -53,17 +53,24 @@ public class Reservation {
 
     public double reductionAge(Vol vol) {
         this.prixFinale = vol.getTarif();
-        if (this.age < 66) {
-            this.prixFinale -= vol.getTarif() / (this.age * 0.1);
-        } else {
-            this.prixFinale -= vol.getTarif() / (this.age * 0.05)    ;
-        }
-        if (this.prixFinale <= vol.getTarif() - 600) {
-            this.prixFinale = this.prixFinale - 600;
-            return this.prixFinale - 600;
-        } else {
+        try {
+            if (age <= 0) {
+                throw new IllegalArgumentException("L'age ne peut pas être négatif ou nul - Réduction liée à l'age non appliquée");
+            } else if (this.age < 66) {
+                this.prixFinale -= vol.getTarif() / (this.age * 0.1);
+            } else {
+                this.prixFinale -= vol.getTarif() / (this.age * 0.05)    ;
+            }
+            if (this.prixFinale <= vol.getTarif() - 600) {
+                this.prixFinale = this.prixFinale - 600;
+                return this.prixFinale - 600;
+            } else {
+                return this.prixFinale;
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
             return this.prixFinale;
-        }
+        }   
     }
 
     public double changePrixPlace(Vol vol) {
