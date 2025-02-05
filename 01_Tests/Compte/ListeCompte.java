@@ -2,7 +2,6 @@ import java.io.Console;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.concurrent.SynchronousQueue;
 
 public class ListeCompte {
     private List<Compte> comptesActifs;
@@ -103,5 +102,29 @@ public class ListeCompte {
             }
         } while (confirmation.equals(""));
         return false;
+    }
+
+    public boolean connexion() {
+        Console console = System.console();
+        String nomUtilisateur;
+        String mdp;
+        Compte compte;
+
+        System.out.println("Pour vous connecter, renseigner les éléments suivants :");
+        System.out.print("Nom utilisateur : ");
+        nomUtilisateur = sc.nextLine();
+        compte = this.getCompte(nomUtilisateur);
+        if (compte == null) {
+            System.out.println("Nom utilisateur inconnu");
+            return false;
+        }
+        mdp = new String(console.readPassword("Mot de passe : "));
+        if (compte.getMdp().equals(mdp)) {
+            System.out.println("Connexion réussie");
+            return true;
+        } else {
+            System.out.println("Mot de passe incorrect");
+            return false;
+        }
     }
 }
