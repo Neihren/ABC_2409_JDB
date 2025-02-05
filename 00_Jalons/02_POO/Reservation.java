@@ -52,38 +52,42 @@ public class Reservation {
     }
 
     public double reductionAge(Vol vol) {
-        double prixReduit = vol.getTarif();
+        this.prixFinale = vol.getTarif();
         if (this.age < 66) {
-            prixReduit -= vol.getTarif() / (this.age * 0.1);
+            this.prixFinale -= vol.getTarif() / (this.age * 0.1);
         } else {
-            prixReduit -= vol.getTarif() / (this.age * 0.05)    ;
+            this.prixFinale -= vol.getTarif() / (this.age * 0.05)    ;
         }
-        if (prixReduit <= 400) {
-            return 400;
+        if (this.prixFinale <= vol.getTarif() - 600) {
+            this.prixFinale = this.prixFinale - 600;
+            return this.prixFinale - 600;
         } else {
-            return prixReduit;
+            return this.prixFinale;
         }
     }
 
     public double changePrixPlace(Vol vol) {
         if (vol.getNbPlacesOccupee() * 100 / vol.getNbPlacesTotale() >= 80) {
-            return vol.getTarif() * 1.2;
+            this.prixFinale *= 1.2;
+            return this.prixFinale;
         } else if (vol.getNbPlacesOccupee() * 100 / vol.getNbPlacesTotale() <= 20) {
-            return vol.getTarif() * 0.8;
+            this.prixFinale *= 0.8;
+            return this.prixFinale;
         } else {
-            return vol.getTarif();
+            return this.prixFinale;
         }
     }
 
-    public double augmentationBusiness(Vol vol) {
+    public double augmentationBusiness() {
         if (this.business) {
-            return vol.getTarif() * 1.7;
+            this.prixFinale *= 1.7;
+            return this.prixFinale;
         } else {
-            return vol.getTarif();
+            return this.prixFinale;
         }
     }
 
-    public double minimumPrixFinale(Vol vol) {
+    public double minimumPrixFinale() {
         if (this.prixFinale <= 500) {
             return 500;
         } else {
@@ -91,11 +95,15 @@ public class Reservation {
         }
     }
 
-    public double prixFinale(Vol vol) {
-        return vol.getTarif() - this.reductionAge(vol) - this.augmentationBusiness(vol) - this.changePrixPlace(vol);
+    public double prixFinal(Vol vol) {
+        reductionAge(vol);
+        changePrixPlace(vol);
+        augmentationBusiness();
+        minimumPrixFinale();
+        return this.prixFinale;
     }
 
-    public Vol ChoisirUnVolParId(List<Vol> vols) {
+    public Vol choisirUnVolParId(List<Vol> vols) {
         for (Vol vol : vols) {
             if (vol.getId() == this.numeroVol) {
                 return vol;
@@ -104,7 +112,7 @@ public class Reservation {
         return null;
     }
 
-    public Vol ChoisirUnVolParDestination(List<Vol> vols) {
+    public Vol choisirUnVolParDestination(List<Vol> vols) {
         for (Vol vol : vols) {
             if (vol.getDestination().equals(this.destination)) {
                 return vol;
