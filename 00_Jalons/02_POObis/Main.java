@@ -11,7 +11,7 @@ public class Main {
         Vol vol3 = new Vol(777, "Tokyo", 1500.50, 200, 190);
         Vol vol4 = new Vol(123, "Rio de Janeiro", 1300.75, 210, 210);
         Vol vol5 = new Vol(457, "Istanbul", 900, 210, 3);
-        Vol vol6 = new Vol(666, "Enfer", 1000, 210, 10);
+        Vol vol6 = new Vol(666, "Enfer", 999, 210, 10);
         vols.add(vol1);
         vols.add(vol2);
         vols.add(vol3);

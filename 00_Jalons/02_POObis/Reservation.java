@@ -58,8 +58,8 @@ public class Reservation {
         } else {
             prixReduit -= vol.getTarif() / (this.age * 0.05)    ;
         }
-        if (prixReduit <= 400) {
-            return 400;
+        if (prixReduit <= vol.getTarif() - 600) {
+            return prixReduit - 600;
         } else {
             return prixReduit;
         }
@@ -92,10 +92,10 @@ public class Reservation {
     }
 
     public double prixFinale(Vol vol) {
-        double prix = vol.getTarif();
-        prix = changePrixPlace(prix);
-        prix = reductionAge(prix);
-        return vol.getTarif() - this.reductionAge(vol) - this.augmentationBusiness(vol) - this.changePrixPlace(vol);
+        double reductionAge = vol.getTarif() - reductionAge(vol);
+        double reductionOccupation = vol.getTarif() - changePrixPlace(vol);
+        double prixBusiness = vol.getTarif() - augmentationBusiness(vol);
+        return vol.getTarif() - reductionAge - reductionOccupation - prixBusiness;
     }
 
     public Vol ChoisirUnVolParId(List<Vol> vols) {
