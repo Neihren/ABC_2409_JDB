@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.ArrayList;
 
-public class Main {
+public class ReservationMain {
 
     public static void main(String[] args) {
 
@@ -19,6 +19,7 @@ public class Main {
         vols.add(vol5);
         vols.add(vol6);
         // Affichage de la liste de vols :
+        System.out.println();
         for (Vol vol : vols) {
             System.out.println(vol.toString());
         }
@@ -28,9 +29,9 @@ public class Main {
 
         // Test de la méthode choisirUnVolParDestination :
 
-        System.out.println("Affichage vol choix par Destination : ");
+        System.out.println("\nAffichage vol choix par Destination : ");
         System.out.println(reservation1.choisirUnVolParDestination(vols).toString());
-        System.out.println("Affichage vol choix par ID");
+        System.out.println("\nAffichage vol choix par ID");
         System.out.println(reservation1.choisirUnVolParId(vols).toString());
 
         
@@ -38,7 +39,7 @@ public class Main {
         
 
         // Prix total :
-        System.out.println("\ntotal avec toutes réductions :");
+        System.out.println("\nTotal avec toutes réductions :");
         if (!reservation1.estCeComplet(reservation1.choisirUnVolParDestination(vols))) {
             System.out.println(reservation1.prixFinal(reservation1.choisirUnVolParId(vols)));
         } else {

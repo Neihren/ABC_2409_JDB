@@ -62,7 +62,7 @@ public class Reservation {
                 this.prixFinale -= vol.getTarif() / (this.age * 0.05)    ;
             }
             if (this.prixFinale <= vol.getTarif() - 600) {
-                this.prixFinale = this.prixFinale - 600;
+                this.prixFinale = vol.getTarif() - 600;
                 return this.prixFinale;
             } else {
                 return this.prixFinale;
@@ -96,7 +96,8 @@ public class Reservation {
 
     public double minimumPrixFinale() {
         if (this.prixFinale <= 500) {
-            return 500;
+            this.prixFinale = 500;
+            return this.prixFinale;
         } else {
             return this.prixFinale;
         }
