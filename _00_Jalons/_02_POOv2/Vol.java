@@ -1,5 +1,4 @@
-import com.crm.Vol;
-
+package _02_POOv2;
 public class Vol {
     
     private int id;

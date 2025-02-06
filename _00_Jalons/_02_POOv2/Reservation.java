@@ -1,6 +1,6 @@
+package _02_POOv2;
 import java.util.List;
 
-import com.crm.Vol;
 
 public class Reservation {
     private String nom;

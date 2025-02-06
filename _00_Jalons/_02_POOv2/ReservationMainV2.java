@@ -1,8 +1,7 @@
+package _02_POOv2;
 import java.util.List;
 import java.util.Scanner;
 
-import com.crm.Reservation;
-import com.crm.Vol;
 
 import java.util.ArrayList;
 
