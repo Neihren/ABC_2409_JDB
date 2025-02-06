@@ -1,5 +1,7 @@
 import java.util.List;
 
+import com.crm.Vol;
+
 public class Reservation {
     private String nom;
     private String prenom;
@@ -43,72 +45,61 @@ public class Reservation {
         return "Reservation [nom=" + nom + ", prenom=" + prenom + ", age=" + age + ", prixFinale=" + prixFinale + ", business=" + business + ", numeroVol=" + numeroVol + ", destination=" + destination + "]";
     }
 
-    public boolean estCeComplet(Vol vol) {
-        if (vol.getNbPlacesOccupee() == vol.getNbPlacesTotale()) {
-            return true;
-        } else {
-            return false;
-        }
+    public String getDestination() {
+        return this.destination;
     }
 
-    public double reductionAge(Vol vol) {
-        this.prixFinale = vol.getTarif();
-        try {
-            if (age <= 0) {
-                throw new IllegalArgumentException("L'age ne peut pas être négatif ou nul - Réduction liée à l'age non appliquée");
-            } else if (this.age < 66) {
-                this.prixFinale -= vol.getTarif() / (this.age * 0.1);
-            } else {
-                this.prixFinale -= vol.getTarif() / (this.age * 0.05)    ;
-            }
-            if (this.prixFinale <= vol.getTarif() - 600) {
-                this.prixFinale = vol.getTarif() - 600;
-                return this.prixFinale;
-            } else {
-                return this.prixFinale;
-            }
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-            return this.prixFinale;
-        }   
+    public double getPrixFinal() {
+        return this.prixFinale;
     }
 
-    public double changePrixPlace(Vol vol) {
-        if (vol.getNbPlacesOccupee() * 100 / vol.getNbPlacesTotale() >= 80) {
+    // Applique la réduction et renvoi le montant de la réduction :
+    public double reductionAge() {
+        double prixInitial = this.prixFinale;
+        if (this.age < 66) {
+                this.prixFinale -= this.prixFinale / (this.age * 0.1);
+            } else {
+                this.prixFinale -= this.prixFinale / (this.age * 0.05)    ;
+            }
+            if (this.prixFinale <= prixInitial - 600) {
+                this.prixFinale = prixInitial - 600;
+                return prixInitial - this.prixFinale;
+            } else {
+                return prixInitial - this.prixFinale;
+            }
+    }
+
+    // Applique la réduction ou majoration et renvoi le montant de celle-ci :
+    public double changePrixPlace(int occupation) {
+        double prixInitial = this.prixFinale;
+        if (occupation >= 80) {
             this.prixFinale *= 1.2;
-            return this.prixFinale;
-        } else if (vol.getNbPlacesOccupee() * 100 / vol.getNbPlacesTotale() <= 20) {
+            return prixInitial - this.prixFinale;
+        } else if (occupation <= 20) {
             this.prixFinale *= 0.8;
-            return this.prixFinale;
+            return prixInitial - this.prixFinale;
         } else {
-            return this.prixFinale;
+            return prixInitial - this.prixFinale;
         }
     }
 
     public double augmentationBusiness() {
+        double prixInitial = this.prixFinale;
         if (this.business) {
             this.prixFinale *= 1.7;
-            return this.prixFinale;
+            return prixInitial - this.prixFinale;
         } else {
-            return this.prixFinale;
+            return prixInitial - this.prixFinale;
         }
     }
 
-    public double minimumPrixFinale() {
+    public boolean minimumPrixFinale() {
         if (this.prixFinale <= 500) {
             this.prixFinale = 500;
-            return this.prixFinale;
+            return true;
         } else {
-            return this.prixFinale;
+            return false;
         }
-    }
-
-    public double prixFinal(Vol vol) {
-        reductionAge(vol);
-        changePrixPlace(vol);
-        augmentationBusiness();
-        minimumPrixFinale();
-        return this.prixFinale;
     }
 
     public Vol choisirUnVolParId(List<Vol> vols) {

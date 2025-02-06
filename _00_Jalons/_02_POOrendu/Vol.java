@@ -1,3 +1,5 @@
+package _02_POOrendu;
+
 public class Vol {
     
     private int id;
@@ -10,7 +12,7 @@ public class Vol {
         this.id = 0;
         this.destination = "";
         this.tarif = 0;
-        this.nbPlacesTotale = 0;
+        this.nbPlacesTotale = 80;
         this.nbPlacesOccupee = 0;
     }
     
@@ -34,32 +36,7 @@ public class Vol {
     }
 
     public String toString() {
-        String result ="";
-        result += "| " + id;
-        for (int i = String.valueOf(id).length(); i < 6; i++) {
-            result += " ";
-        }
-        result += "|  " + destination;
-        for (int i = destination.length(); i < 17; i++) {
-            result += " ";
-        }
-        result += "|";
-        for (int i = String.valueOf(String.format("%.2f", tarif)).length(); i < 11; i++) {
-            result += " ";
-        }
-        result += String.format("%.2f", tarif) + "  ";
-        result += "|";
-        for (int i = String.valueOf(nbPlacesTotale).length(); i < 14; i++) {
-            result += " ";
-        }
-        result += nbPlacesTotale + "  ";
-        result += "|";
-        for (int i = String.valueOf(nbPlacesOccupee).length(); i < 15; i++) {
-            result += " ";
-        }
-        result += nbPlacesOccupee + "  ";
-        result += "|";
-        return result;
+        return "Vol [id=" + id + ", destination=" + destination + ", tarif=" + tarif + ", nbPlacesTotale=" + nbPlacesTotale + ", nbPlacesOccupee=" + nbPlacesOccupee + "]";
     }
 
     public int getNbPlacesTotale() {
