@@ -19,6 +19,9 @@ public class Vol {
         this.destination = destination;
         this.tarif = tarif;
         this.nbPlacesTotale = nbPlacesTotale;
+        if (this.nbPlacesTotale < 80) {
+            this.nbPlacesTotale = 80;
+        }
         this.nbPlacesOccupee = nbPlacesOccupee;
     }   
     

@@ -10,7 +10,7 @@ public class Vol {
         this.id = 0;
         this.destination = "";
         this.tarif = 0;
-        this.nbPlacesTotale = 0;
+        this.nbPlacesTotale = 80;
         this.nbPlacesOccupee = 0;
     }
     
@@ -19,6 +19,9 @@ public class Vol {
         this.destination = destination;
         this.tarif = tarif;
         this.nbPlacesTotale = nbPlacesTotale;
+        if (this.nbPlacesTotale < 80) {
+            this.nbPlacesTotale = 80;
+        }
         this.nbPlacesOccupee = nbPlacesOccupee;
     }   
     
