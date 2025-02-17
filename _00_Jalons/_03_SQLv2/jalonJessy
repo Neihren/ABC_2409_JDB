@@ -1,0 +1,131 @@
+CREATE DATABASE jalonsJessy;
+USE jalonsJessy;
+
+CREATE TABLE vol (
+    id INT NOT NULL AUTO_INCREMENT,
+    destination VARCHAR(30) NOT NULL,
+    tarif DECIMAL(7, 2) NOT NULL,
+    nbPlacesTotales INT NOT NULL,
+    nbPlacesOccupees INT NOT NULL,
+    CONSTRAINT vol_pk PRIMARY KEY (id)  
+);
+
+CREATE TABLE reservation (
+    id INT NOT NULL AUTO_INCREMENT,
+    business BOOLEAN NOT NULL,
+    id_vol INT NOT NULL,
+    id_personne INT NOT NULL,
+    CONSTRAINT reservation_pk PRIMARY KEY (id)
+);
+
+CREATE TABLE compteBancaire (
+    id INT NOT NULL AUTO_INCREMENT,
+    balance DECIMAL(7, 2) NOT NULL,
+    overdraft DECIMAL(7, 2) NOT NULL,
+    CONSTRAINT compteBancaire_pk PRIMARY KEY (id)
+);
+
+CREATE TABLE personne (
+    id INT NOT NULL AUTO_INCREMENT,
+    surname VARCHAR(30) NOT NULL,
+    firstname VARCHAR(30) NOT NULL,
+    gender ENUM ('male', 'female', 'other') NOT NULL,
+    date_of_birth DATE NOT NULL,
+    income DECIMAL(7, 2) NOT NULL,
+    other_income DECIMAL(7, 2)NOT NULL,
+    id_compteBancaire INT NOT NULL,
+    CONSTRAINT personnes PRIMARY KEY (id)
+);
+
+ALTER TABLE reservation
+    ADD CONSTRAINT reservation_vol
+    FOREIGN KEY (id_vol)
+    REFERENCES vol (id)
+;
+
+ALTER TABLE reservation
+    ADD CONSTRAINT reservation_personne
+    FOREIGN KEY (id_personne)
+    REFERENCES personne (id)
+;
+
+ALTER TABLE personne
+    ADD CONSTRAINT personne_compteBancaire
+    FOREIGN KEY (id_compteBancaire)
+    REFERENCES compteBancaire (id)
+;
+
+INSERT INTO vol (destination, tarif, nbPlacesTotales, nbPlacesOccupees)
+VALUES  ('New York', 1000.00, 210, 89),
+        ('Johannesburg', 1200.25, 180, 50),
+        ('Tokyo', 1500.50, 200, 190),
+        ('Rio de Janeiro', 1300.75, 210, 210),
+        ('Istanbul', 900.00, 210, 3),
+        ('Enfer', 999.00, 300, 299)
+;
+
+INSERT INTO compteBancaire (balance, overdraft)
+VALUES  (12000, 1000.00),
+        (7514.45, 999.99),
+        (99999.99, 99999.99),
+        (25878.45, 1000.01),
+        (48712.92, 4524.12),
+        (9154.45, 154.0)
+;
+
+INSERT INTO personne (surname, firstname, gender, date_of_birth, income, other_income, id_compteBancaire)
+VALUES  ('ALEMANY', 'JUSTIN', 'male',  '2010-01-01', 2000, 1500, 1),
+        ('BIEHLER', 'CAROLINE', 'female', '2005-01-01', 2000, 1500, 2),
+        ('CETIN', 'HULYA', 'female', '2000-01-01', 2000, 1500, 3),
+        ('DE BRITO', 'JESSY', 'male', '1995-01-01', 2000, 1500, 4),
+        ('DEL', 'MICHAEL', 'male', '1990-01-01', 2000, 1500, 5),
+        ('GEHIN', 'FREDERIC', 'male', '1985-01-01', 2000, 1500, 6)
+;
+
+INSERT INTO reservation (business, id_vol, id_personne)
+VALUES  (TRUE, 1, 1),
+        (TRUE, 2, 2),
+        (TRUE, 3, 3),
+        (FALSE, 6, 4),
+        (FALSE, 5, 5),
+        (TRUE, 4, 6)
+;
+
+SELECT  *
+FROM    vol
+WHERE   destination LIKE 'New York'
+;
+
+SELECT  *
+FROM    reservation
+JOIN    vol v on v.id = reservation.id_vol
+WHERE   v.tarif > 1000
+;
+
+SELECT  *
+FROM    compteBancaire
+JOIN    personne p on p.id_compteBancaire = compteBancaire.id
+WHERE   p.surname LIKE 'Alemany'
+;
+
+SELECT  *
+FROM    compteBancaire
+JOIN    personne p on p.id_compteBancaire = compteBancaire.id
+WHERE   overdraft > 1000
+;
+
+SELECT  surname AS Nom,
+        firstname AS Prenom,
+        TIMESTAMPDIFF(YEAR, date_of_birth, CURRENT_DATE) AS Age,
+        date_of_birth AS 'Date de naissance'
+FROM    personne
+WHERE 	TIMESTAMPDIFF(YEAR, date_of_birth, CURRENT_DATE) BETWEEN 20 AND 40
+;
+
+SELECT  surname AS Nom,
+        firstname AS Prenom,
+        gender AS Genre
+FROM    personne
+WHERE   gender = 'female'
+AND     firstname LIKE '%a'
+;

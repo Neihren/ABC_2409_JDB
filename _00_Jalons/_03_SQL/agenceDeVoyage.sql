@@ -15,6 +15,7 @@ CREATE TABLE reservation (
     id INT NOT NULL AUTO_INCREMENT,
     nom VARCHAR(30) NOT NULL,
     prenom VARCHAR(30) NOT NULL,
+    age INT(3) NOT NULL,
     business BOOLEAN NOT NULL,
     id_vol INT NOT NULL,
     CONSTRAINT reservation_pk PRIMARY KEY (id)
@@ -35,13 +36,13 @@ VALUES  ('New York', 1000.00, 210, 89),
         ('Enfer', 999.00, 300, 299)
 ;
 
-INSERT INTO reservation (nom, prenom, business, id_vol)
-VALUES  ('ALEMANY', 'JUSTIN', TRUE, 1),
-        ('BIEHLER', 'CAROLINE', TRUE, 2),
-        ('CETIN', 'HULYA', TRUE, 3),
-        ('DE BRITO', 'JESSY', FALSE, 6),
-        ('DEL', 'MICHAEL', FALSE, 5),
-        ('GEHIN', 'FREDERIC', TRUE, 4)
+INSERT INTO reservation (nom, prenom, age, business, id_vol)
+VALUES  ('ALEMANY', 'JUSTIN', 38, TRUE, 1),
+        ('BIEHLER', 'CAROLINE', 25, TRUE, 2),
+        ('CETIN', 'HULYA', 39, TRUE, 3),
+        ('DE BRITO', 'JESSY', 35, FALSE, 6),
+        ('DEL', 'MICHAEL', 29, FALSE, 5),
+        ('GEHIN', 'FREDERIC', 46, TRUE, 4)
 ;
 
 SELECT  *
