@@ -1,0 +1,22 @@
+{
+    "passengers": [
+        {
+            "name": "Toto toto",
+            "age": 30,
+            "pickup_location": "1 place du marché - Mulhouse",
+            "dropoff_location": "2 rue de la république - Strasbourg"
+        },
+        {
+            "name": "Tata tata",
+            "age": 25,
+            "pickup_location": "6 allée des tilleuls - Mulhouse",
+            "dropoff_location": "42 rue de la paix - Colmar"
+        },
+        {
+            "name": "Titi titi",
+            "age": 28,
+            "pickup_location": "21 rue de la liberté - Colmar",
+            "dropoff_location": "12 rue de la gare - Strasbourg"
+        }
+    ]
+}

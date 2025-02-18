@@ -1,0 +1,49 @@
+{
+    "series": [
+        {
+            "title": "Stranger Things",
+            "genre": "Science Fiction",
+            "seasons": 4,
+            "rating": "8.7",
+            "release_year": 2016,
+            "cast": ["Winona Ryder", "David Harbour", "Finn Wolfhard"],
+            "description": "A group of kids in a small town uncover a series of supernatural mysteries."
+        },
+        {
+            "title": "The Witcher",
+            "genre": "Fantasy",
+            "seasons": 2,
+            "rating": "8.2",
+            "release_year": 2019,
+            "cast": ["Henry Cavill", "Anya Chalotra", "Freya Allan"],
+            "description": "A monster hunter struggles to find his place in a world where people often prove more wicked than beasts."
+        },
+        {
+            "title": "Money Heist",
+            "genre": "Crime",
+            "seasons": 5,
+            "rating": "8.3",
+            "release_year": 2017,
+            "cast": ["Úrsula Corberó", "Álvaro Morte", "Itziar Ituño"],
+            "description": "A criminal mastermind plans the biggest heist in recorded history."
+        },
+        {
+            "title": "Bridgerton",
+            "genre": "Drama",
+            "seasons": 2,
+            "rating": "7.3",
+            "release_year": 2020,
+            "cast": ["Phoebe Dynevor", "Regé-Jean Page", "Nicola Coughlan"],
+            "description": "Wealth, lust, and betrayal set against the backdrop of Regency-era England."
+        },
+        {
+            "title": "The Crown",
+            "genre": "Historical Drama",
+            "seasons": 4,
+            "rating": "8.6",
+            "release_year": 2016,
+            "cast": ["Olivia Colman", "Tobias Menzies", "Helena Bonham Carter"],
+            "description": "A dramatized history of the reign of Queen Elizabeth II."
+        }
+    ]
+}
