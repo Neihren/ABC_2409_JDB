@@ -1,0 +1,44 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<menu>
+    <entrees>
+        <entre id="1">
+            <nom>Salade verte</nom>
+            <prix>10.94 €</prix>
+            <description>De la salade... de couleur verte</description>
+        </entre>
+        <entre id="2">
+            <nom>Oeufs mimosa</nom>
+            <prix>7.99 €</prix>
+            <description>Des oeufs et de la Mayo</description>
+        </entre>
+    </entrees>
+    <plats>
+        <plat id="1">
+            <nom>Steak Frites</nom>
+            <prix>12.99 €</prix>
+            <description>Un steak et des frites</description>
+        </plat>
+        <plat id="2">
+            <nom>Pates bolognaise</nom>
+            <prix>10.25 €</prix>
+            <description>Des pates à la sauce tomate</description>
+        </plat>
+        <plat id="3">
+            <nom>Ragout</nom>
+            <prix>19.99 €</prix>
+            <description>Surprise</description>
+        </plat>
+    </plats>
+    <desserts>
+        <dessert id="1">
+            <nom>Yahourt sans sucre</nom>
+            <prix>7.20 €</prix>
+            <description>Un yahourt sucré sans le sucre</description>
+        </dessert>
+        <dessert id="2">
+            <nom>Pain perdu</nom>
+            <prix>4.04€</prix>
+            <description>Si on arrive à mettre la main dessus</description>
+        </dessert>
+    </desserts>
+</menu>

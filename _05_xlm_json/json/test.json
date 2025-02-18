@@ -1,0 +1,34 @@
+{
+    "stagiaires": [
+        {
+            "nom": "Toto",
+            "prenom": "Toto",
+            "dateDeNaissance": "1990-01-01",
+            "section": "ABC DEV"
+        },
+        {
+            "nom": "Tata",
+            "prenom": "Tata",
+            "dateDeNaissance": "1990-01-01",
+            "section": "ABC DEV"
+        },
+        {
+            "nom": "Tutu",
+            "prenom": "Tutu",
+            "dateDeNaissance": "1990-01-01",
+            "section": "ABC DEV"
+        },
+        {
+            "nom": "Titi",
+            "prenom": "Titi",
+            "dateDeNaissance": "1990-01-01",
+            "section": "ABC DEV"
+        },
+        {
+            "nom": "Tete",
+            "prenom": "Tete",
+            "dateDeNaissance": "1990-01-01",
+            "section": "ABC DEV"
+        }
+    ]
+}

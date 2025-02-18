@@ -1,0 +1,39 @@
+{
+    "utilisateurs": [
+        {
+            "id": 1,
+            "username": "jonhd",
+            "surname": "John",
+            "firstname": "John",
+            "dob": "1980-01-01"
+        },
+        {
+            "id": 2,
+            "username": "janed",
+            "surname": "Doe",
+            "firstname": "Jane",
+            "dob": "1980-01-01"
+        },
+        {
+            "id": 3,
+            "username": "jackd",
+            "surname": "Doe",
+            "firstname": "Jack",
+            "dob": "1980-01-01"
+        },
+        {
+            "id": 4,
+            "username": "jilld",
+            "surname": "Doe",
+            "firstname": "Jill",
+            "dob": "1980-01-01"
+        },
+        {
+            "id": 5,
+            "username": "juded",
+            "surname": "Doe",
+            "firstname": "Jude",
+            "dob": "1980-01-01"
+        }
+    ]
+}

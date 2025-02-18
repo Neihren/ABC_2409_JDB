@@ -1,0 +1,79 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<offres>
+    <offre id="1">
+        <intitule>Développeur PHP</intitule>
+        <ville>Paris</ville>
+        <description>
+            <taches>
+                <tache>Création de site web</tache>
+                <tache>Création de site e-commerce</tache>
+                <tache>Création de site vitrine</tache>
+            </taches>
+            <avantages>
+                <avantage>CDI</avantage>
+                <avantage>RTT</avantage>
+                <avantage>10% de participation</avantage>
+            </avantages>
+            <profilRecherche>Compétent</profilRecherche>
+        </description>
+        <competences>
+            <competence>PHP</competence>
+            <competence>MySQL</competence>
+            <competence>HTML</competence>
+            <competence>CSS</competence>
+            <competence>JavaScript</competence>
+        </competences>
+        <dateDeDebut>2025-09-23</dateDeDebut>
+        <salaireAnnuel>68000 €</salaireAnnuel>
+        <adresseContact>php@paris.com</adresseContact>
+    </offre>
+    <offre id="2">
+        <intitule>Développeur JAVA</intitule>
+        <ville>Mulhouse</ville>
+        <description>
+            <taches>
+                <tache>Création d'application</tache>
+                <tache>Suivi de projet</tache>
+            </taches>
+            <avantages>
+                <avantage>CDD</avantage>
+                <avantage>Salaire</avantage>
+            </avantages>
+            <profilRecherche>Compétent</profilRecherche>
+        </description>
+        <competences>
+            <competence>Java</competence>
+            <competence>Spring</competence>
+            <competence>Angular</competence>
+            <competence>SQL</competence>
+            <competence>HTML</competence>
+        </competences>
+        <dateDeDebut>2025-09-23</dateDeDebut>
+        <salaireAnnuel>60000 €</salaireAnnuel>
+        <adresseContact>java@mulhouse.com</adresseContact>
+    </offre>
+    <offre id="3">
+        <intitule>Développeur NodeJS</intitule>
+        <ville>Toulouse</ville>
+        <description>
+            <taches>
+                <tache>Tests</tache>
+                <tache>Débugage</tache>
+            </taches>
+            <avantages>
+                <avantage>un emploi</avantage>
+            </avantages>
+            <profilRecherche>Vivant</profilRecherche>
+        </description>
+        <competences>
+            <competence>NodeJS</competence>
+            <competence>JavaScript</competence>
+            <competence>Linux</competence>
+            <competence>Git</competence>
+            <competence>MySQL</competence>
+        </competences>
+        <dateDeDebut>2025-09-23</dateDeDebut>
+        <salaireAnnuel>50000 €</salaireAnnuel>
+        <adresseContact>nodejs@toulouse.com</adresseContact>
+    </offre>
+</offres>

@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<classe>
+    <eleves>
+        <eleve id="1">
+            <nom>Toto</nom>
+            <prenom>Toto</prenom>
+            <dateDeNaissance>1998-01-01</dateDeNaissance>
+            <section>ABC DEV</section>
+        </eleve>
+        <eleve id="2">
+            <nom>Tata</nom>
+            <prenom>Tata</prenom>
+            <dateDeNaissance>1998-01-01</dateDeNaissance>
+            <section>ABC DEV</section>
+        </eleve>
+        <eleve id="3">
+            <nom>Tete</nom>
+            <prenom>Tete</prenom>
+            <dateDeNaissance>1998-01-01</dateDeNaissance>
+            <section>ABC DEV</section>
+        </eleve>
+    </eleves>
+    <formateurs>
+        <formateur id="1">
+            <nom>Tutu</nom>
+            <prenom>Tutu</prenom>
+            <dateDeNaissance>1998-01-01</dateDeNaissance>
+            <section>ABC DEV</section>
+        </formateur>
+        <formateur id="2">
+            <nom>Titi</nom>
+            <prenom>Titi</prenom>
+            <dateDeNaissance>1998-01-01</dateDeNaissance>
+            <section>ABC DEV</section>
+        </formateur>
+    </formateurs>
+</classe>

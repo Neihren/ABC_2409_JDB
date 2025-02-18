@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<formation>
+    <intitule>ABC DEV</intitule>
+    <duree>5 mois</duree>
+    <dateDeDebut>2024-09-23</dateDeDebut>
+    <dateDeFin>2025-02-23</dateDeFin>
+    <eleves>
+        <eleve id="1">
+            <nom>Toto</nom>
+            <prenom>Toto</prenom>
+            <dateDeNaissance>1998-01-01</dateDeNaissance>
+            <adresseEmail>toto@abc.com</adresseEmail>
+        </eleve>
+        <eleve id="2">
+            <nom>Tata</nom>
+            <prenom>Tata</prenom>
+            <dateDeNaissance>1998-01-01</dateDeNaissance>
+            <adresseEmail>tata@abc.com</adresseEmail>
+        </eleve>
+        <eleve id="3">
+            <nom>Tete</nom>
+            <prenom>Tete</prenom>
+            <dateDeNaissance>1998-01-01</dateDeNaissance>
+            <adresseEmail>tete@abc.com</adresseEmail>
+        </eleve>
+    </eleves>
+</formation>
