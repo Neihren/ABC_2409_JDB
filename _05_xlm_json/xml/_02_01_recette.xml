@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<crepesBretonnes>
+    <duree>35 minutes</duree>
+    <difficulte>Facile</difficulte>
+    <cout>Abordable</cout>
+    <quantite>12 crepes</quantite>
+    <ingredients>
+        <ingredient>
+            <nom>Farine</nom>
+            <quantite>250g</quantite>
+        </ingredient>
+        <ingredient>
+            <nom>Oeuf</nom>
+            <quantite>2</quantite>
+        </ingredient>
+        <ingredient>
+            <nom>Lait</nom>
+            <quantite>50cl</quantite>
+        </ingredient>
+        <ingredient>
+            <nom>Sucre roux</nom>
+            <quantite>70g</quantite>
+        </ingredient>
+        <ingredient>
+            <nom>Rhum</nom>
+            <quantite>1 cuillère à soupe</quantite>
+        </ingredient>
+        <ingredient>
+            <nom>Sucre vanillé</nom>
+            <quantite>1 sachet</quantite>
+        </ingredient>
+        <ingredient>
+            <nom>Sel</nom>
+            <quantite>1 pincée</quantite>
+        </ingredient>
+        <ingredient>
+            <nom>Huile</nom>
+            <quantite>1 cuillère à soupe</quantite>
+        </ingredient>
+    </ingredients>
+    <preparation>
+        <etape>
+            <numero>1</numero>
+            <description>
+                mélanger tous les ingrédients pour faire une pâte à crêpes.
+            </description>
+        </etape>
+        <etape>
+            <numero>2</numero>
+            <description>
+                Utiliser un crêpière pour cuire les crêpes.
+            </description>
+        </etape>
+    </preparation>
+</crepesBretonnes>

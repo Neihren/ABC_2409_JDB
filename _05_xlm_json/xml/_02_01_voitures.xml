@@ -1,0 +1,47 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<voitures>
+    <voiture id="1">
+        <marque>Peugeot</marque>
+        <modele>208</modele>
+        <annee>2020</annee>
+        <couleur>Blanc</couleur>
+        <prix>15000</prix>
+        <moteur>
+            <type>Essence</type>
+            <puissance>100</puissance>
+        </moteur>
+    </voiture>
+    <voiture id="2">
+        <marque>Renault</marque>
+        <modele>Clio</modele>
+        <annee>2021</annee>
+        <couleur>Vert</couleur>
+        <prix>16000</prix>
+        <moteur>
+            <type>Essence</type>
+            <puissance>90</puissance>
+        </moteur>
+    </voiture>
+    <voiture id="3">
+        <marque>Peugeot</marque>
+        <modele>3008</modele>
+        <annee>2021</annee>
+        <couleur>Blanc</couleur>
+        <prix>25000</prix>
+        <moteur>
+            <type>Essence</type>
+            <puissance>130</puissance>
+        </moteur>
+    </voiture>
+    <voiture id="4">
+        <marque>Renault</marque>
+        <modele>Captur</modele>
+        <annee>2021</annee>
+        <couleur>Blanc</couleur>
+        <prix>20000</prix>
+        <moteur>
+            <type>Essence</type>
+            <puissance>110</puissance>
+        </moteur>
+    </voiture>
+</voitures>

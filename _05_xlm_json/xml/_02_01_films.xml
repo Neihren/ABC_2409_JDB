@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<films>
+    <film id="1">
+        <titre>Captain America Brave New Wold</titre>
+        <realisateur>Julius Onah</realisateur>
+        <annee>2025</annee>
+        <genre>Action</genre>
+        <duree>120</duree>
+        <pays>USA</pays>
+        <acteurs>
+            <acteur>Carl Lumbly</acteur>
+            <acteur>Giancarlo Esposito</acteur>
+            <acteur>Danny Ramirez</acteur>
+        </acteurs>
+        <synopsis>
+            Peu après avoir fait la connaissance du nouveau président des Etats-Unis Thaddeus Ross, Sam Wilson se retrouve plongé au coeur d'un gigantesque incident international. Dans une lutte acharnée contre la montre, il se retrouve contraint de découvrir la raison de cet infâme complot avant que le véritable cerveau de l’opération ne mette bientôt le monde entier à feu et à sang…    
+        </synopsis>
+        <projections>
+            <projection>
+                <salle>6</salle>
+                <date>2025-02-18</date>
+                <heure>16:20:00</heure>
+            </projection>
+            <projection>
+                <salle>8</salle>
+                <date>2025-02-18</date>
+                <heure>17:00:00</heure>
+            </projection>
+            <projection>
+                <salle>14</salle>
+                <date>2025-02-18</date>
+                <heure>18:20:00</heure>
+            </projection>
+        </projections>
+    </film>
+    <film id="2">
+        <titre>Paddington au Pérou</titre>
+        <realisateur>Dougal Wilson</realisateur>
+        <annee>2024</annee>
+        <genre>Aventure</genre>
+        <duree>107</duree>
+        <pays>UK</pays>
+        <acteurs>
+            <acteur>Antonio Banderas</acteur>
+            <acteur>Olivia Colman</acteur>
+            <acteur>Emily Mortimer</acteur>
+        </acteurs>
+        <synopsis>
+            Le troisième volet des aventures de l'ourson Paddington qui retourne au Pérou, son pays d'origine, pour rendre visite à sa tante Lucy, à la Maison des ours retraités        </synopsis>
+        <projections>
+            <projection>
+                <salle>6</salle>
+                <date>2022-02-18</date>
+                <heure>16:20:00</heure>
+            </projection>
+            <projection>
+                <salle>8</salle>
+                <date>2022-02-18</date>
+                <heure>17:00:00</heure>
+            </projection>
+            <projection>
+                <salle>14</salle>
+                <date>2022-02-18</date>
+                <heure>18:20:00</heure>
+            </projection>
+        </projections>
+    </film>
+</films>
