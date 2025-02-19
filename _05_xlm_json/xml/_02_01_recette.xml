@@ -5,47 +5,47 @@
     <cout>Abordable</cout>
     <quantite>12 crepes</quantite>
     <ingredients>
-        <ingredient>
+        <ingredient id="1">
             <nom>Farine</nom>
             <quantite>250g</quantite>
         </ingredient>
-        <ingredient>
+        <ingredient id="2">
             <nom>Oeuf</nom>
             <quantite>2</quantite>
         </ingredient>
-        <ingredient>
+        <ingredient id="3">
             <nom>Lait</nom>
             <quantite>50cl</quantite>
         </ingredient>
-        <ingredient>
+        <ingredient id="4">
             <nom>Sucre roux</nom>
             <quantite>70g</quantite>
         </ingredient>
-        <ingredient>
+        <ingredient id="5">
             <nom>Rhum</nom>
             <quantite>1 cuillère à soupe</quantite>
         </ingredient>
-        <ingredient>
+        <ingredient id="6">
             <nom>Sucre vanillé</nom>
             <quantite>1 sachet</quantite>
         </ingredient>
-        <ingredient>
+        <ingredient id="7">
             <nom>Sel</nom>
             <quantite>1 pincée</quantite>
         </ingredient>
-        <ingredient>
+        <ingredient id="8">
             <nom>Huile</nom>
             <quantite>1 cuillère à soupe</quantite>
         </ingredient>
     </ingredients>
     <preparation>
-        <etape>
+        <etape id="1">
             <numero>1</numero>
             <description>
                 mélanger tous les ingrédients pour faire une pâte à crêpes.
             </description>
         </etape>
-        <etape>
+        <etape id="2">
             <numero>2</numero>
             <description>
                 Utiliser un crêpière pour cuire les crêpes.

@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <legumes>
-    <legume>
+    <legume id="1">
         <nom>Carotte</nom>
         <couleur>Orange</couleur>
         <prix>1.5</prix>
         <quantite>10</quantite>
     </legume>
-    <legume>
+    <legume id="2">
         <nom>Tomate</nom>
         <couleur>Rouge</couleur>
         <prix>2.5</prix>
         <quantite>5</quantite>
     </legume>
-    <legume>
+    <legume id="3">
         <nom>Salade</nom>
         <couleur>Vert</couleur>
         <prix>1.2</prix>
         <quantite>15</quantite>
     </legume>
-    <legume>
+    <legume id="4">
         <nom>Chou-fleur</nom>
         <couleur>Blanc</couleur>
         <prix>2.0</prix>
         <quantite>3</quantite>
     </legume>
-    <legume>
+    <legume id="5">
         <nom>Radis</nom>
         <couleur>Rouge</couleur>
         <prix>1.0</prix>
         <quantite>20</quantite>
     </legume>
-    <legume>
+    <legume id="6">
         <nom>Concombre</nom>
         <couleur>Vert</couleur>
         <prix>1.8</prix>
